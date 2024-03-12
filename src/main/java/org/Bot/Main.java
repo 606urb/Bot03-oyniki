@@ -8,6 +8,6 @@ public class Main {
     public static void main(String[] args)throws TelegramApiException {
         TelegramBotsApi telegramBotsApi =new TelegramBotsApi(DefaultBotSession.class);
         System.out.println("Started...");
-        telegramBotsApi.registerBot(new MyBot());
+        telegramBotsApi.registerBot(new MyBot3());
     }
 }

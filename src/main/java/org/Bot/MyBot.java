@@ -1,3 +1,4 @@
+/*
 package org.Bot;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -325,3 +326,4 @@ public class MyBot extends TelegramLongPollingBot {
         return "7187995039:AAGmfYfVC7VxC5roXj0dfZVnyQJX_tks728";
     }
 }
+*/
