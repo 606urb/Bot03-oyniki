@@ -1,4 +1,4 @@
-package com.company;
+package org.Bot;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -95,17 +95,56 @@ public class MyBot extends TelegramLongPollingBot {
                 } else if (text.split("\\-").length == 2) {
                     //12 - 3 - 9 - 5
                     // 12 - 3 only this
+                    String[] numbers = text.split("\\-");
 
+                    double result = Double.parseDouble(numbers[0]) - Double.parseDouble(numbers[1]); // 12 - 3
+
+                    EditMessageText editMessageText = EditMessageText
+                            .builder()
+                            .text(String.valueOf(result))
+                            .chatId(message.getChatId())
+                            .messageId(message.getMessageId())
+                            .build();
+                    editMessageText.setReplyMarkup(getKeyboard());
+
+                    editMSG(editMessageText);
+                    return;
 
                 } else if (text.split("\\/").length == 2) {
                     //12 / 3 / 9 / 5
                     // 12 / 3 only this
+                    String[] numbers = text.split("\\/");
 
+                    double result = Double.parseDouble(numbers[0]) / Double.parseDouble(numbers[1]); // 12 / 3
+
+                    EditMessageText editMessageText = EditMessageText
+                            .builder()
+                            .text(String.valueOf(result))
+                            .chatId(message.getChatId())
+                            .messageId(message.getMessageId())
+                            .build();
+                    editMessageText.setReplyMarkup(getKeyboard());
+
+                    editMSG(editMessageText);
+                    return;
 
                 } else if (text.split("\\*").length == 2) {
                     //12 * 3 * 9 * 5
                     // 12 * 3 only this
+                    String[] numbers = text.split("\\*");
 
+                    double result = Double.parseDouble(numbers[0]) * Double.parseDouble(numbers[1]); // 12 * 3
+
+                    EditMessageText editMessageText = EditMessageText
+                            .builder()
+                            .text(String.valueOf(result))
+                            .chatId(message.getChatId())
+                            .messageId(message.getMessageId())
+                            .build();
+                    editMessageText.setReplyMarkup(getKeyboard());
+
+                    editMSG(editMessageText);
+                    return;
                 }
             }
 
@@ -278,11 +317,11 @@ public class MyBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "@bot_testoviY_project_bot";
+        return "@Dars_mashq_bot";
     }
 
     @Override
     public String getBotToken() {
-        return "7056756199:AAEwQ9I6iv0-6CH994_ifRxRAuUbYC1vofc";
+        return "7187995039:AAGmfYfVC7VxC5roXj0dfZVnyQJX_tks728";
     }
 }
