@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MyBot extends TelegramLongPollingBot {
 
-    private String text = "0";
+    private String text = "3";
 
     @Override
     public void onUpdateReceived(Update update) {
